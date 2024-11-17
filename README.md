@@ -65,18 +65,6 @@ The project uses Python and several libraries to implement a workflow that enabl
    - Verifies the inserted data by querying MongoDB and displaying a sample.
 
 ---
-
-## **Example Document from MongoDB**
-
-Here’s an example of a document stored in MongoDB:
-```json
-{
-    "_id": "64f77bd2efb7da85a14cdbb2",
-    "rating": 5,
-    "review": "Great app! Easy to use and lots of fun.",
-    "timestamp": "2023-11-17T08:34:21"
-}
-
 ## **Potential Applications**
 - **Sentiment Analysis:** Understand user opinions and feedback about the app.
 - **Feature Improvement:** Identify common complaints and suggestions for enhancement.
@@ -92,4 +80,16 @@ Here’s an example of a document stored in MongoDB:
 
 ## **License**
 This project is for educational purposes only and is not affiliated with TikTok or Google Play.
+## **Example Document from MongoDB**
+
+Here’s an example of a document stored in MongoDB:
+```json
+{
+    "_id": "64f77bd2efb7da85a14cdbb2",
+    "rating": 5,
+    "review": "Great app! Easy to use and lots of fun.",
+    "timestamp": "2023-11-17T08:34:21"
+}
+
+
 

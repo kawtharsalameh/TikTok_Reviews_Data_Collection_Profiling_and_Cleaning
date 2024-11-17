@@ -77,5 +77,19 @@ Here’s an example of a document stored in MongoDB:
     "timestamp": "2023-11-17T08:34:21"
 }
 
-Added Project Workflow section to README.md
+## **Potential Applications**
+- **Sentiment Analysis:** Understand user opinions and feedback about the app.
+- **Feature Improvement:** Identify common complaints and suggestions for enhancement.
+- **Market Trends:** Track user sentiments over time.
+
+---
+
+## **Notes**
+- Ensure your MongoDB Atlas cluster is properly configured and accessible before running the project.
+- Verify the CSV file before inserting data into MongoDB.
+
+---
+
+## **License**
+This project is for educational purposes only and is not affiliated with TikTok or Google Play.
 

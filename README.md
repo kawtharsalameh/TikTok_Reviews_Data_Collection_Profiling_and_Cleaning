@@ -1,26 +1,47 @@
-# Data_Collection_MongoDB
-Google Play review scraper and MongoDB integration
-
 # Data Collection and Storage in MongoDB
 
-## Overview
-This project demonstrates how to collect reviews from the Google Play Store for the TikTok app, save them to a CSV file, and store them in a MongoDB database. The dataset can be used for sentiment analysis, app performance evaluation, and trend identification.
+## **Project Overview**
+This project demonstrates how to automate the process of collecting user reviews for the TikTok app from the Google Play Store, saving the reviews into a CSV file, and storing them in a MongoDB database for further analysis. 
 
-## Features
-- Fetches 5,000 reviews from Google Play.
-- Saves the data to a CSV file for backup.
-- Inserts the data into a MongoDB Atlas database.
-- Queries and displays the stored data for verification.
-  
+The project uses Python and several libraries to implement a workflow that enables efficient data collection and storage.
 
-## Files
-- `Data_engineering_Assignment1.ipynb`: Jupyter Notebook with the code and step-by-step instructions.
-- `tiktok_reviews.csv`: CSV file containing the collected reviews.
-- `README.md`: Project documentation.
+---
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/Data_Collection_MongoDB.git
-   cd Data_Collection_MongoDB
+## **Features**
+- Fetches up to 5,000 reviews from the Google Play Store for the TikTok app.
+- Saves the collected data in a CSV file (`tiktok_reviews.csv`) for analysis and backup.
+- Inserts the reviews into a MongoDB database for querying and visualization.
+- Verifies the stored data by querying MongoDB.
+
+---
+
+## **Project Files**
+1. `Data_engineering_Assignment1.ipynb`: 
+   - A Jupyter Notebook containing all the code for the project.
+   - Includes the following steps:
+     - Installing required libraries.
+     - Fetching app reviews using the `google-play-scraper` library.
+     - Saving reviews to a CSV file.
+     - Connecting to MongoDB and inserting the data.
+     - Querying and verifying the stored data.
+
+2. `tiktok_reviews.csv`: 
+   - A CSV file containing the collected reviews, including:
+     - `Rating`: The numerical rating given by users.
+     - `Review`: The text content of the review.
+     - `Timestamp`: The date and time of the review.
+
+3. `README.md`: 
+   - This documentation file.
+
+---
+
+## **How to Run the Project**
+
+### **1. Prerequisites**
+- Install Python 3.x.
+- Install the required libraries:
+  ```python
+  !pip install pymongo google-play-scraper pandas
+
 

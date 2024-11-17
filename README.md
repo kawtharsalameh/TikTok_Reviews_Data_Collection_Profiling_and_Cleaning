@@ -45,3 +45,37 @@ The project uses Python and several libraries to implement a workflow that enabl
   !pip install pymongo google-play-scraper pandas
 
 
+---
+## **Project Workflow**
+
+1. **Data Collection:**
+   - Fetches reviews for the TikTok app using the `google-play-scraper` library.
+   - Captures data fields like:
+     - `Rating`
+     - `Review text`
+     - `Timestamp`
+
+2. **Saving Data:**
+   - Saves the collected reviews to a CSV file (`tiktok_reviews.csv`).
+
+3. **Storing in MongoDB:**
+   - Inserts the reviews into the `Data_Engineering` database under the `reviews` collection.
+
+4. **Querying Data:**
+   - Verifies the inserted data by querying MongoDB and displaying a sample.
+
+---
+
+## **Example Document from MongoDB**
+
+Here’s an example of a document stored in MongoDB:
+```json
+{
+    "_id": "64f77bd2efb7da85a14cdbb2",
+    "rating": 5,
+    "review": "Great app! Easy to use and lots of fun.",
+    "timestamp": "2023-11-17T08:34:21"
+}
+
+Added Project Workflow section to README.md"
+

@@ -60,7 +60,7 @@ The word cloud below represents the most common words found in the reviews. Larg
 ![Word Cloud of Most Frequent Words](WORDCLOUD.png)
 
 #### **Figure 2: Top 10 Words by Frequency**
-The bar chart below shows the 10 most frequent words in the dataset after cleaning.
+The bar chart below shows the 10 most frequent words in the dataset before cleaning.
 
 ![Top 10 Words by Frequency](TOP10WORDS.png)
 

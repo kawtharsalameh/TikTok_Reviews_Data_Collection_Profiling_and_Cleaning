@@ -127,11 +127,7 @@ This project successfully prepared the TikTok review dataset for advanced analys
 
 ---
 
-### **Figures**
-Replace the placeholders (`path-to-...`) with the appropriate file paths or URLs for your figures:
-1. Word Cloud: `path-to-wordcloud.png`
-2. Language Distribution: `path-to-language-distribution.png`
-3. Top 10 Words: `path-to-top10-words.png`
+
 
 
 ### **License**

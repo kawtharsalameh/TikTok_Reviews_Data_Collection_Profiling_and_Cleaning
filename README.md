@@ -1,4 +1,4 @@
-# **TikTok Reviews: Data Collection, Processing, and Analysis**
+# **TikTok Reviews: Data Collection, Profiling and Cleaning**
 
 ## **Project Overview**
 This project explores user reviews for the TikTok app collected from the Google Play Store. The goal is to clean, analyze, and process the reviews to prepare them for further analysis, such as sentiment analysis, feature extraction, and trend identification. The reviews were filtered, cleaned, and processed using several techniques to ensure consistency and reliability of the dataset.

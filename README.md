@@ -134,5 +134,9 @@ Replace the placeholders (`path-to-...`) with the appropriate file paths or URLs
 3. Top 10 Words: `path-to-top10-words.png`
 
 
+### **License**
+This project is licensed under the MIT License. You are free to use, modify, and distribute the code and content provided in this project, subject to the following terms:
 
+Attribution is required. If you use this project in your work, please credit the original creator.
+This project is provided "as is" without warranty of any kind, either express or implied.
 

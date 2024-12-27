@@ -33,9 +33,9 @@ This project explores user reviews for the TikTok app collected from the Google 
 
 ### **1. Data Profiling**
 - **Duplicates Removed:** Identified and removed duplicate entries in the dataset.
-- **Missing Values:** All missing reviews were removed to ensure data consistency.
+- **Missing Values:**  Identified missing reviews to ensure data consistency.
 - **Word Frequencies:** Computed the most frequent words in the dataset, excluding stopwords.
-
+- **Checking the Spelling Mistakes:** Spelling mistakes in the reviews were systematically identified using the **TextBlob** library. This process involved analyzing each word in the text to detect errors and correct them. Detecting and correcting spelling mistakes is critical to improving the quality of the dataset, as errors can introduce noise and reduce the effectiveness of downstream tasks like sentiment analysis or keyword extraction.
 #### **Figure 1: Word Cloud of Most Frequent Words**
 The word cloud below represents the most common words found in the reviews. Larger words indicate higher frequency.
 

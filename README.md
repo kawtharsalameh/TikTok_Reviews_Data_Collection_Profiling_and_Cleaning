@@ -4,6 +4,21 @@
 This project explores user reviews for the TikTok app collected from the Google Play Store. The goal is to clean, analyze, and process the reviews to prepare them for further analysis, such as sentiment analysis, feature extraction, and trend identification. The reviews were filtered, cleaned, and processed using several techniques to ensure consistency and reliability of the dataset.
 
 ---
+## **Libraries Used**
+The following libraries were used throughout the project:
+
+- **Pandas:** For handling and analyzing tabular data.
+- **NumPy:** For numerical operations.
+- **Matplotlib:** For creating static, animated, and interactive visualizations.
+- **Seaborn:** For statistical data visualization.
+- **WordCloud:** For generating word clouds.
+- **NLTK (Natural Language Toolkit):** For natural language processing, including stopwords and lemmatization.
+- **TextBlob:** For spelling corrections and text analysis.
+- **fastText:** For language detection.
+- **GoogleTrans:** For translating non-English reviews into English.
+- **re:** For regular expressions used in text cleaning.
+- **string:** For handling text-based operations (e.g., removing punctuation).
+- **collections.Counter:** For counting word frequencies.
 
 ## **Features**
 

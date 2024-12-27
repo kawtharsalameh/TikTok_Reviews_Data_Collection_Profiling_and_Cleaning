@@ -34,12 +34,20 @@ This project explores user reviews for the TikTok app collected from the Google 
 ### **1. Data Profiling**
 - **Duplicates Removed:** Identified and removed duplicate entries in the dataset.
 - **Missing Values:**  Identified missing reviews to ensure data consistency.
-- **Word Frequencies:** Computed the most frequent words in the dataset, excluding stopwords.
-- **Checking the Spelling Mistakes:** Spelling mistakes in the reviews were systematically identified using the **TextBlob** library. This process involved analyzing each word in the text to detect errors and correct them. Detecting and correcting spelling mistakes is critical to improving the quality of the dataset, as errors can introduce noise and reduce the effectiveness of downstream tasks like sentiment analysis or keyword extraction.
+- **Word Frequencies:** Computed the most 10 frequent words in the dataset.
+- **Checking the Spelling Mistakes:** Spelling mistakes in the reviews were systematically identified using the **TextBlob** library. This process involved analyzing each word in the text to detect errors and correct them. Detecting and correcting spelling mistakes is critical to improving the quality of the dataset,
+as errors can introduce noise and reduce the effectiveness of downstream tasks like sentiment analysis or keyword extraction.
+- **Visualize the textual content using two different charts.**
+
 #### **Figure 1: Word Cloud of Most Frequent Words**
 The word cloud below represents the most common words found in the reviews. Larger words indicate higher frequency.
 
 ![Word Cloud of Most Frequent Words](WORDCLOUD.png)
+
+#### **Figure 2: Top 10 Words by Frequency**
+The bar chart below shows the 10 most frequent words in the dataset after cleaning.
+
+![Top 10 Words by Frequency](TOP10WORDS.png)
 
 ---
 
@@ -48,10 +56,10 @@ The word cloud below represents the most common words found in the reviews. Larg
 - **Languages Filtered:** Rare languages (those with less than 0.6% representation) were removed.
 - **Translation:** Approximately 50% of non-English reviews were successfully translated into English.
 
-#### **Figure 2: Language Distribution**
+#### **Figure 3: Language Distribution**
 The bar chart below shows the distribution of the top 10 detected languages by percentage.
 
-![Language Distribution](path-to-language-distribution.png)
+![Language Distribution](path-to-TOP10LANG.png)
 
 ---
 
@@ -74,10 +82,6 @@ The bar chart below shows the distribution of the top 10 detected languages by p
   - **Rating:** Numerical rating given by users.
   - **Timestamp:** Date and time when the review was submitted.
 
-#### **Figure 3: Top 10 Words by Frequency**
-The bar chart below shows the 10 most frequent words in the dataset after cleaning.
-
-![Top 10 Words by Frequency](path-to-top10-words.png)
 
 ---
 

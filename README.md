@@ -1,95 +1,119 @@
-# Data Collection and Storage in MongoDB
+# **TikTok Reviews: Data Collection, Processing, and Analysis**
 
 ## **Project Overview**
-This project demonstrates how to automate the process of collecting user reviews for the TikTok app from the Google Play Store, saving the reviews into a CSV file, and storing them in a MongoDB database for further analysis. 
-
-The project uses Python and several libraries to implement a workflow that enables efficient data collection and storage.
+This project explores user reviews for the TikTok app collected from the Google Play Store. The goal is to clean, analyze, and process the reviews to prepare them for further analysis, such as sentiment analysis, feature extraction, and trend identification. The reviews were filtered, cleaned, and processed using several techniques to ensure consistency and reliability of the dataset.
 
 ---
 
 ## **Features**
-- Fetches up to 5,000 reviews from the Google Play Store for the TikTok app.
-- Saves the collected data in a CSV file (`tiktok_reviews.csv`) for analysis and backup.
-- Inserts the reviews into a MongoDB database for querying and visualization.
-- Verifies the stored data by querying MongoDB.
+
+### **Data Collection**
+- Collected 5,000 TikTok reviews from the Google Play Store.
+- Stored reviews in a CSV file for processing.
+
+### **Data Profiling and Cleaning**
+- Removed duplicates and missing values.
+- Standardized text to lowercase and removed URLs, punctuation, and stopwords.
+
+### **Language Detection and Translation**
+- Detected the language of each review using fastText.
+- Filtered out rare languages with less than 0.6% representation.
+- Translated non-English reviews to English for consistency.
+
+### **Spelling and Text Normalization**
+- Corrected typos while preserving critical terms like "TikTok" and "app."
+- Applied lemmatization to reduce words to their base forms.
+
+### **Data Output**
+- Saved the final cleaned and processed data in CSV format, including lemmatized reviews, ratings, and timestamps.
 
 ---
 
-## **Project Files**
-1. `Data_engineering_Assignment1.ipynb`: 
-   - A Jupyter Notebook containing all the code for the project.
-   - Includes the following steps:
-     - Installing required libraries.
-     - Fetching app reviews using the `google-play-scraper` library.
-     - Saving reviews to a CSV file.
-     - Connecting to MongoDB and inserting the data.
-     - Querying and verifying the stored data.
-
-2. `tiktok_reviews.csv`: 
-   - A CSV file containing the collected reviews, including:
-     - `Rating`: The numerical rating given by users.
-     - `Review`: The text content of the review.
-     - `Timestamp`: The date and time of the review.
-
-3. `README.md`: 
-   - This documentation file.
-
----
-
-## **How to Run the Project**
-
-### **1. Prerequisites**
-- Install Python 3.x.
-- Install the required libraries:
-  ```python
-  !pip install pymongo google-play-scraper pandas
-
-
----
 ## **Project Workflow**
 
-1. **Data Collection:**
-   - Fetches reviews for the TikTok app using the `google-play-scraper` library.
-   - Captures data fields like:
-     - `Rating`
-     - `Review text`
-     - `Timestamp`
+### **1. Data Profiling**
+- **Duplicates Removed:** Identified and removed duplicate entries in the dataset.
+- **Missing Values:** All missing reviews were removed to ensure data consistency.
+- **Word Frequencies:** Computed the most frequent words in the dataset, excluding stopwords.
 
-2. **Saving Data:**
-   - Saves the collected reviews to a CSV file (`tiktok_reviews.csv`).
+#### **Figure 1: Word Cloud of Most Frequent Words**
+The word cloud below represents the most common words found in the reviews. Larger words indicate higher frequency.
 
-3. **Storing in MongoDB:**
-   - Inserts the reviews into the `Data_Engineering` database under the `reviews` collection.
-
-4. **Querying Data:**
-   - Verifies the inserted data by querying MongoDB and displaying a sample.
-
----
-## **Potential Applications**
-- **Sentiment Analysis:** Understand user opinions and feedback about the app.
-- **Feature Improvement:** Identify common complaints and suggestions for enhancement.
-- **Market Trends:** Track user sentiments over time.
+![Word Cloud of Most Frequent Words](path-to-wordcloud.png)
 
 ---
 
-## **Notes**
-- Ensure your MongoDB Atlas cluster is properly configured and accessible before running the project.
-- Verify the CSV file before inserting data into MongoDB.
+### **2. Language Detection and Translation**
+- **Languages Detected:** Reviews were written in 11 languages, with English comprising 87.7%.
+- **Languages Filtered:** Rare languages (those with less than 0.6% representation) were removed.
+- **Translation:** Approximately 50% of non-English reviews were successfully translated into English.
+
+#### **Figure 2: Language Distribution**
+The bar chart below shows the distribution of the top 10 detected languages by percentage.
+
+![Language Distribution](path-to-language-distribution.png)
 
 ---
 
-## **License**
-This project is for educational purposes only and is not affiliated with TikTok or Google Play.
-## **Example Document from MongoDB**
+### **3. Data Cleaning**
+- **Stopwords and Punctuation Removal:** Cleaned text by removing unnecessary elements like punctuation, URLs, and stopwords.
+- **Lowercasing:** Converted all text to lowercase for consistency.
+- **Spelling Correction:** Typos were corrected while preserving critical terms like "TikTok" and "app."
 
-Here’s an example of a document stored in MongoDB:
-```json
-{
-    "_id": "64f77bd2efb7da85a14cdbb2",
-    "rating": 5,
-    "review": "Great app! Easy to use and lots of fun.",
-    "timestamp": "2023-11-17T08:34:21"
-}
+---
+
+### **4. Text Normalization**
+- **Lemmatization:** Applied lemmatization to reduce words to their base forms, ensuring consistency across similar words.
+
+---
+
+### **5. Processed Dataset**
+- **Final Dataset:** Retained approximately 91% of the original data after cleaning and filtering.
+- **Saved as CSV:** Processed reviews were saved in CSV format, including the following fields:
+  - **Text:** Lemmatized and cleaned review content.
+  - **Rating:** Numerical rating given by users.
+  - **Timestamp:** Date and time when the review was submitted.
+
+#### **Figure 3: Top 10 Words by Frequency**
+The bar chart below shows the 10 most frequent words in the dataset after cleaning.
+
+![Top 10 Words by Frequency](path-to-top10-words.png)
+
+---
+
+## **Insights and Figures**
+
+### **Key Insights**
+- The dataset was dominated by English reviews (87.7%).
+- Common themes in the reviews included app usability, updates, and performance issues.
+- Cleaning and processing reduced noise, enabling better analysis for future tasks like sentiment analysis.
+
+---
+
+## **Applications**
+- **Sentiment Analysis:** Extract user opinions and emotions about the TikTok app.
+- **Feature Improvement:** Identify common complaints and suggestions.
+- **Trend Tracking:** Understand user sentiment changes over time.
+
+---
+
+## **Limitations and Suggestions**
+- **Translation Gaps:** Approximately 50% of non-English reviews remain untranslated due to language detection errors and API limitations. Expanding language mappings and retrying failed translations could improve coverage.
+- **Emojis Retained:** Emojis were preserved as they can provide sentiment insights but may need separate analysis for specific use cases.
+
+---
+
+## **Final Notes**
+This project successfully prepared the TikTok review dataset for advanced analysis. By applying data cleaning, language detection, and translation, the reviews were standardized and made consistent. Future steps include implementing sentiment analysis and extracting trends from user feedback.
+
+---
+
+### **Figures**
+Replace the placeholders (`path-to-...`) with the appropriate file paths or URLs for your figures:
+1. Word Cloud: `path-to-wordcloud.png`
+2. Language Distribution: `path-to-language-distribution.png`
+3. Top 10 Words: `path-to-top10-words.png`
+
 
 
 

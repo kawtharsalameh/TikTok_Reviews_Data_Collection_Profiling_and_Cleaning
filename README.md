@@ -59,7 +59,7 @@ The bar chart below shows the 10 most frequent words in the dataset after cleani
 #### **Figure 3: Language Distribution**
 The bar chart below shows the distribution of the top 10 detected languages by percentage.
 
-![Language Distribution](path-to-TOP10LANG.png)
+![Language Distribution](TOP10LANG.png)
 
 ---
 

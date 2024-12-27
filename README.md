@@ -39,7 +39,7 @@ This project explores user reviews for the TikTok app collected from the Google 
 #### **Figure 1: Word Cloud of Most Frequent Words**
 The word cloud below represents the most common words found in the reviews. Larger words indicate higher frequency.
 
-![Word Cloud of Most Frequent Words](path-to-wordcloud.png)
+![Word Cloud of Most Frequent Words](WORDCLOUD.png)
 
 ---
 
